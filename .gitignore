@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+.ipynb
+
+# vscode checkpoints
+.vscode
+
+# glove data
+summarization/data/glove.6B
+
