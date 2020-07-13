@@ -44,9 +44,9 @@ lazy-object-proxy==1.4.3
 lxml
 MarkupSafe==1.1.1
 mccabe==0.6.1
-mkl-fft==1.1.0
-mkl-random==1.1.0
-mkl-service==2.3.0
+mkl-fft
+mkl-random
+mkl-service
 murmurhash==1.0.2
 networkx==2.4
 nltk
