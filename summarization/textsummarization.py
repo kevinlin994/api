@@ -1,7 +1,7 @@
 # %%
 from gensim.summarization import summarize
 from summarizer import Summarizer
-from TextRankSummarizer import get_summary
+from summarization.TextRankSummarizer import get_summary
 import unicodedata
 import pandas as pd
 import numpy as np
