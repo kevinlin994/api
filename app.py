@@ -16,6 +16,7 @@ app = Flask(__name__)
 def form():
   return render_template('index.html')
 
+### Handling Errors
 @app.errorhandler(NotFound)
 def page_not_found_handler(e: HTTPException):
     return render_template('404.html'), 404
