@@ -1,4 +1,5 @@
 from flask import Flask, request, redirect, url_for, flash, jsonify, send_file, render_template
+from werkzeug.exceptions import Forbidden, HTTPException, NotFound, RequestTimeout, Unauthorized
 import numpy as np
 import pandas as pd
 import pickle as p
@@ -14,7 +15,7 @@ app = Flask(__name__)
 @app.route('/')
 def form():
   return render_template('index.html')
-  
+
 @app.errorhandler(NotFound)
 def page_not_found_handler(e: HTTPException):
     return render_template('404.html'), 404
