@@ -34,6 +34,7 @@ def forbidden_handler(e: HTTPException):
 @app.errorhandler(RequestTimeout)
 def request_timeout_handler(e: HTTPException):
     return render_template('408.html'), 408
+    
 ### THIS ONE WORKS WITH FORM-DATA
 @app.route('/api/v1/resources/text/', methods=['POST'])
 def summarize_from_text():
