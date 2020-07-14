@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {background-image: url('/static/images/spurlogo.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                font-family:'Segoe UI';
+                padding:175px;
+                margin :15px;}
+            h1   {color: rgb(10, 2, 2);}
+        </style>
+    </head>
+    <body>
+        <h1>Article Summarization and Formatting Tool</h1>
+        Upload your article as a word document <br>
+        <form action="/transform" method="post" enctype="multipart/form-data">
+            <input type="file" name="data_file" />
+            <br><br>
+            <input type="submit" value="Upload Word Doc" method="get" >
+        </form>
+    </body>
+</html>

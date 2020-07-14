@@ -1,0 +1,30 @@
+{
+  "hitData": {
+    "tagsOnSubmit": [
+      "task=15522"
+    ],
+    "respondWithModel": false,
+    "description": "Imagine your name is Damon Straeter and you are talking to a virtual assistant that can help manage your calendar. You can imagine that there are pre-existing events on your calendar that already have 1-4 attendees. Please ask it to update these events by replacing attendees from the pre-existing event with different attendees. It is not necessary to have one-to-one replacement of attendees. You may replace one attendee with two attendees and also replace two attendees with one. The bot may request for confirmation. If it does, feel free to respond accordingly. PLEASE DO NOT COPY AND PASTE! BE CREATIVE AND HAVE FUN!"
+  },
+  "options": {
+    "startFirstIteration": true,
+    "domain": "custom",
+    "batches": [
+      {
+        "hit_type": "turkbeam",
+        "num_results_per_assignment": 1,
+        "num_hits": 2,
+        "iteration": 0,
+        "num_assignments_per_hit": 2,
+        "rewards_cents": 10
+      },
+      {
+        "rewards_cents": 10,
+        "hit_type": "turkbeam",
+        "num_results_per_assignment": 1,
+        "num_assignments_per_hit": 1
+      }
+    ],
+    "description": "Test Title"
+  }
+}
