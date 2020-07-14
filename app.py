@@ -67,4 +67,4 @@ def transform_view():
     return send_file('result.docx', attachment_filename='new_file.docx')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
