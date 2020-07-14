@@ -55,6 +55,7 @@ def transform():
     new.add_paragraph(bert_sum(text))
     return new
 
+### Allows for HTML interface
 @app.route('/transform', methods=["GET","POST"])
 def transform_view():
     f = request.files['data_file']
