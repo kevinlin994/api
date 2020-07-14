@@ -14,7 +14,25 @@ app = Flask(__name__)
 @app.route('/')
 def form():
   return render_template('index.html')
+  
+@app.errorhandler(NotFound)
+def page_not_found_handler(e: HTTPException):
+    return render_template('404.html'), 404
 
+
+@app.errorhandler(Unauthorized)
+def unauthorized_handler(e: HTTPException):
+    return render_template('401.html'), 401
+
+
+@app.errorhandler(Forbidden)
+def forbidden_handler(e: HTTPException):
+    return render_template('403.html'), 403
+
+
+@app.errorhandler(RequestTimeout)
+def request_timeout_handler(e: HTTPException):
+    return render_template('408.html'), 408
 ### THIS ONE WORKS WITH FORM-DATA
 @app.route('/api/v1/resources/text/', methods=['POST'])
 def summarize_from_text():
