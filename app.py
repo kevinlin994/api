@@ -45,5 +45,25 @@ def return_document():
 
     return send_file('datafile.docx', attachment_filename='test.docx')
 
+def transform():
+    data = 'datafile.docx'
+    document = Document(data)
+    new = Document()
+    text =''
+    for para in document.paragraphs:
+        text+=para.text
+    new.add_paragraph(bert_sum(text))
+    return new
+
+@app.route('/transform', methods=["GET","POST"])
+def transform_view():
+    f = request.files['data_file']
+    f.save('datafile.docx')
+    if not f:
+        return "Please upload a word document"
+    result = transform()
+    result.save('result.docx')
+    return send_file('result.docx', attachment_filename='new_file.docx')
+
 if __name__ == '__main__':
     app.run(debug=True)
