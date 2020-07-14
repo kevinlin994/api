@@ -1,10 +1,12 @@
 from flask import Flask, request, redirect, url_for, flash, jsonify, send_file, render_template
 import numpy as np
+import pandas as pd
 import pickle as p
 import json
 from summarization.textsummarization import bert_sum
 from docx import Document
 from docx.shared import Inches
+from linkcheck import flag_private_urls
 
 app = Flask(__name__)
 
@@ -65,6 +67,17 @@ def transform_view():
     result = transform()
     result.save('result.docx')
     return send_file('result.docx', attachment_filename='new_file.docx')
+
+### THIS ONE WORKS WITH FORM-DATA
+@app.route('/api/v1/resources/document/links', methods=['POST'])
+def check_links():
+    
+    data = request.files["link"]
+    data.save('linkfile.docx')
+    results = flag_private_urls('linkfile.docx')
+    results.to_excel('links.xlsx')
+    
+    return send_file('links.xlsx')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
