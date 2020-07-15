@@ -101,4 +101,4 @@ def check_links():
     return send_file('links.xlsx')
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', post='8000')
