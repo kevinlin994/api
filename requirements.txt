@@ -38,7 +38,7 @@ isort==4.3.21
 itsdangerous==1.1.0
 jdcal==1.4.1
 jedi
-Jinja2==2.11.2
+Jinja2==2.11.3
 jmespath
 joblib
 jupyter-client
