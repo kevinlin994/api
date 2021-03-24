@@ -74,7 +74,7 @@ pytz==2020.1
 pyzmq==19.0.1
 regex
 requests
-rsa==4.0
+rsa==4.1
 s3transfer==0.1.13
 sacremoses==0.0.43
 scikit-learn==0.23.1
